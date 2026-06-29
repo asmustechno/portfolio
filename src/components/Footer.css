@@ -95,12 +95,26 @@
 .footer__bottom {
   padding-top: 30px;
   border-top: 1px solid var(--border);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .footer__bottom p {
   font-size: 0.85rem;
   color: var(--text-muted);
+}
+
+.footer__legal-link {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.footer__legal-link:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 768px) {

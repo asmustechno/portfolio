@@ -1,22 +1,24 @@
+import { Link } from 'react-router-dom'
 import './Footer.css'
 
 const footerLinks = [
   {
     title: 'Company',
     links: [
-      { label: 'About', href: '#about' },
-      { label: 'Services', href: '#services' },
-      { label: 'Projects', href: '#projects' },
-      { label: 'Contact', href: '#contact' },
+      { label: 'About', href: '/#about' },
+      { label: 'Services', href: '/#services' },
+      { label: 'Projects', href: '/#projects' },
+      { label: 'Contact', href: '/#contact' },
+      { label: 'Privacy Policy', href: '/privacy-policy', isRoute: true },
     ],
   },
   {
     title: 'Services',
     links: [
-      { label: 'Web Development', href: '#services' },
-      { label: 'Mobile Apps', href: '#services' },
-      { label: 'Cloud Solutions', href: '#services' },
-      { label: 'UI/UX Design', href: '#services' },
+      { label: 'Web Development', href: '/#services' },
+      { label: 'Mobile Apps', href: '/#services' },
+      { label: 'Cloud Solutions', href: '/#services' },
+      { label: 'UI/UX Design', href: '/#services' },
     ],
   },
 ]
@@ -59,10 +61,10 @@ export default function Footer() {
       <div className="container">
         <div className="footer__grid">
           <div className="footer__brand">
-            <a href="#home" className="footer__logo">
+            <Link to="/" className="footer__logo">
               <span className="footer__logo-icon">A</span>
               <span>Asmus <strong>Techno</strong></span>
-            </a>
+            </Link>
             <p className="footer__tagline">
               Building innovative technology solutions that empower businesses worldwide.
             </p>
@@ -88,7 +90,11 @@ export default function Footer() {
               <ul>
                 {group.links.map((link) => (
                   <li key={link.label}>
-                    <a href={link.href}>{link.label}</a>
+                    {'isRoute' in link && link.isRoute ? (
+                      <Link to={link.href}>{link.label}</Link>
+                    ) : (
+                      <a href={link.href}>{link.label}</a>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -98,6 +104,7 @@ export default function Footer() {
 
         <div className="footer__bottom">
           <p>&copy; {year} Asmus Techno. All rights reserved.</p>
+          <Link to="/privacy-policy" className="footer__legal-link">Privacy Policy</Link>
         </div>
       </div>
     </footer>

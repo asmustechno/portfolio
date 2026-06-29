@@ -1,0 +1,95 @@
+.privacy {
+  padding: 120px 0 80px;
+  min-height: 100vh;
+}
+
+.privacy__container {
+  max-width: 800px;
+}
+
+.privacy__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  transition: var(--transition);
+}
+
+.privacy__back:hover {
+  color: var(--accent);
+}
+
+.privacy__header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.privacy__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.privacy__updated {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.privacy__content {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.privacy__section-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+
+.privacy__text {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.privacy__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+  list-style: disc;
+}
+
+.privacy__list li {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.privacy__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-top: 8px;
+}
+
+.privacy__contact li {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.privacy__contact strong {
+  color: var(--text-primary);
+}

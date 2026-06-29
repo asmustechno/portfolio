@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'About', href: '#about' },
-  { label: 'Services', href: '#services' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', href: '/#home' },
+  { label: 'About', href: '/#about' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Projects', href: '/#projects' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export default function Navbar() {
@@ -24,12 +25,12 @@ export default function Navbar() {
   return (
     <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="container navbar__inner">
-        <a href="#home" className="navbar__logo">
+        <Link to="/" className="navbar__logo">
           <span className="navbar__logo-icon">A</span>
           <span className="navbar__logo-text">
             Asmus <strong>Techno</strong>
           </span>
-        </a>
+        </Link>
 
         <nav className={`navbar__nav ${menuOpen ? 'navbar__nav--open' : ''}`}>
           <ul className="navbar__links">
@@ -41,7 +42,7 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
-          <a href="#contact" className="btn btn-primary navbar__cta" onClick={handleNavClick}>
+          <a href="/#contact" className="btn btn-primary navbar__cta" onClick={handleNavClick}>
             Get Started
           </a>
         </nav>
