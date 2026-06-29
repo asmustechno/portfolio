@@ -103,7 +103,7 @@ export default function PrivacyPolicy() {
               {section.contact && (
                 <ul className="privacy__contact">
                   <li><strong>Email:</strong> asmustechno@gmail.com</li>
-                  <li><strong>Phone:</strong> +91 7737993036</li>
+                  <li><strong>Phone:</strong> +91 77379 93036</li>
                   <li><strong>Address:</strong> Jodhpur, India</li>
                 </ul>
               )}
